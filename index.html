@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="output.css">
+  
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body class="bg-lighter font-Karla flex justify-center items-center min-h-screen relative" >
+  <!--====================================== Success Message -->
+  <div id="success_message" class="hidden bg-medium absolute rounded-xl w-1/2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 p-4 shadow-lg flex-col items-center text-center">
+    <img src="/public/assets/images/icon-success-check.svg" alt="Success" class="mb-4 w-12 h-12">
+    <h3 class="text-lg font-bold text-white">Message Sent!</h3>
+    <p class="text-sm text-white">Thanks for completing the form. We'll be in touch soon!</p>
+  </div>
+  <!--======================================= name ======= -->
+  <div class="bg-white rounded-xl p-6 w-[600px]">
+  <h1 class="text-3xl text-greyDarker">Contact Us</h1>
+    <form id="contactForm">
+        <div class="my-3">
+          <label class="text-greyDarker block" for="name">Name<span class="text-medium">*</span></label>
+          <input type="text" name="name" id="name" class="border border-greyMedium rounded w-full p-2 focus:outline-medium">
+          <p class="hidden text-customRed">This field is required</p>
+        </div>
+<!--========================================= number phone -->
+        <div>
+          <label class="text-greyDarker block" for="phone_number">Phone Number<span class="text-medium">*</span></label>
+          <input type="text" name="phone_number" id="phone_number" class="border border-greyMedium rounded w-full p-2 focus:outline-medium">
+          <p class="hidden text-customRed">This field is required</p>
+        </div>
+<!--========================================= Gender  -->
+<div class="w-full my-3">
+  <label class="text-greyDarker block" for="gender">Gender<span class="text-medium">*</span></label>
+  <select 
+    id="gender" 
+    name="gender" 
+    required 
+    class="block w-full mt-1 rounded-md border border-medium py-2 px-3 text-sm shadow-sm focus:border-medium focus:outline-none focus:ring-1 focus:ring-medium">
+    <option value="" disabled selected>Select your gender</option>
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+    <option value="other">Other</option>
+  </select>
+  <p id="genderError" class="hidden text-sm text-customRed">This field is required</p>
+</div>
+<!--=========================================Password and Confirm -->
+      <div>
+        <label for="password" class="text-greyDarker block">Password <span class="text-medium">*</span></label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required class="border border-greyMedium rounded w-full p-2 focus:outline-medium">
+        <p class="hidden text-customRed">This field is required</p>
+      </div>
+      <div class="my-3">
+        <label for="confirm_password" class="text-greyDarker block">Confirm Password <span class="text-medium">*</span></label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required class="border border-greyMedium rounded w-full p-2 focus:outline-medium">
+        <p class="hidden text-customRed">This field is required</p>
+      </div>
+<!--========================================= Newsletter -->
+      <div>
+        <div>
+          <input type="checkbox" name="newsletter" id="newsletter" class="my-4">
+          <label class="text-greyDarker" for="newsletter">Subscribe to our newsletter<span class="text-medium">*</span></label>
+        </div>
+      </div>
+<!--========================================= Button -->
+      <button class="w-full bg-medium text-white rounded p-2" type="submit">Submit</button>
+    </form>
+  </div>
+
+<script src="main.js"></script>
+</body> 
+</html>
